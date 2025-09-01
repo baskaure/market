@@ -323,12 +323,10 @@
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
             padding: 3rem;
             border-radius: 20px;
             position: relative;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+
         }
 
         .testimonial-quote {
@@ -1065,4 +1063,110 @@
     width: 45px;   /* ajuste selon ton design */
     height: 45px;
     object-fit: contain;
+}
+
+    /* Conteneur principal */
+    .testimonial-container {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Conteneur du slider */
+    .testimonial-slider-wrapper {
+        position: relative;
+    }
+
+    /* Slider (contenant les slides) */
+    .testimonial-slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Chaque slide */
+    .testimonial-card {
+        min-width: 100%;
+        padding: 3rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Style des flèches */
+    .testimonial-arrow {
+        background: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: none;
+        color: black;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .testimonial-arrow.prev {
+        left: 10px;
+    }
+
+    .testimonial-arrow.next {
+        right: 10px;
+    }
+
+    /* Style des points */
+    .testimonial-dots {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .testimonial-dots .dot {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #bbb;
+        cursor: pointer;
+    }
+
+    .testimonial-dots .dot.active {
+        background-color: #333;
+    }
+
+    /* Style des images et textes (à adapter selon ton design) */
+
+
+    /* Rendre la citation en gras */
+    .testimonial-quote {
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 2.5rem;
+        font-weight: 600; /* gras */
+        text-align: center;
+    }
+
+    .author-info {
+        margin-top: 1rem;
+    }
+
+    .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333; 
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    background: none;  
+    padding: 0;      
+}
+
+@media (max-width: 768px) {
+  .logos-grid .logo-item {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }

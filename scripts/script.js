@@ -1,3 +1,40 @@
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.testimonial-slider');
+            const slides = document.querySelectorAll('.testimonial-card');
+            const prevBtn = document.querySelector('.testimonial-arrow.prev');
+            const nextBtn = document.querySelector('.testimonial-arrow.next');
+            const dots = document.querySelectorAll('.testimonial-dots .dot');
+            let currentIndex = 0;
+
+            // Met à jour l'affichage du slider
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            // Flèche précédente
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+                updateSlider();
+            });
+
+            // Flèche suivante
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+                updateSlider();
+            });
+
+            // Clique sur les points
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    currentIndex = parseInt(dot.dataset.index);
+                    updateSlider();
+                });
+            });
+        });
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -179,26 +216,27 @@
                 performantObserver.observe(el);
             });
         }, 100);
-const logoObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            logoObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.1
-});
 
-document.querySelectorAll('.logos-grid .logo-item').forEach(item => {
-    logoObserver.observe(item);
-});
+        const logoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    logoObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.logos-grid .logo-item').forEach(item => {
+            logoObserver.observe(item);
+        });
 
 
-document.querySelector('.logo a').addEventListener('click', function(e){
-    e.preventDefault(); // empêche le href par défaut
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+        document.querySelector('.logo a').addEventListener('click', function(e){
+            e.preventDefault(); // empêche le href par défaut
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
