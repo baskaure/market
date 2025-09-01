@@ -13,12 +13,13 @@
 
         /* Variables CSS */
         :root {
-            --primary-navy: #1e293b;
-            --primary-blue: #3b82f6;
+            --primary-navy: #22253d;
+            --primary-blue: #4f578d;
             --accent-gold: #f59e0b;
             --accent-orange: #fb923c;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
+            --text-dark: #22253d;
+            --text-light: #a6abcd;
+            --text-semi-light: #4f578d;;
             --bg-light: #f8fafc;
             --white: #ffffff;
         }
@@ -277,7 +278,7 @@
         }
 
         .logos-text {
-            color: var(--text-light);
+            color: var(--text-semi-light);
             font-size: 1rem;
             margin-bottom: 2rem;
         }
@@ -371,7 +372,7 @@
         }
 
         .author-info small {
-            color: var(--text-light);
+            color: var(--text-semi-light);
         }
 
         .author-avatars {
@@ -428,6 +429,16 @@
         }
 
         .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-semi-light);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle2 {
             text-align: center;
             font-size: 1.25rem;
             color: var(--text-light);
@@ -512,7 +523,7 @@
         }
 
         .step-card p {
-            color: var(--text-light);
+            color: var(--text-semi-light);
             line-height: 1.6;
         }
 
@@ -542,7 +553,7 @@
 
         .about-content p {
             font-size: 1.1rem;
-            color: var(--text-light);
+            color: var(--text-semi-light);
             margin-bottom: 2rem;
             line-height: 1.7;
         }
@@ -576,7 +587,7 @@
         }
 
         .stat-label {
-            color: var(--text-light);
+            color: var(--text-semi-light);
             font-size: 0.875rem;
             line-height: 1.4;
         }
@@ -1118,7 +1129,7 @@
     /* Style des points */
     .testimonial-dots {
         text-align: center;
-        margin-top: 1.5rem;
+        margin-top: -1rem;
     }
 
     .testimonial-dots .dot {
@@ -1164,10 +1175,66 @@
     padding: 0;      
 }
 
-@media (max-width: 768px) {
-  .logos-grid .logo-item {
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
+
+/* Correction pour mobile : empêche la superposition */
+@media (max-width: 767px) {
+    .logos-section {
+        position: static !important;
+        padding: 2rem 1rem;
+        margin: 0;
+        background: white;
+        overflow: visible !important;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: auto;
+        border-top: 1px solid #eee;
+    }
+
+    .logos-section::before {
+        display: none !important;
+    }
+
+    .logos-container {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .logos-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .logo-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        width: 45%;
+        max-width: 200px;
+        margin: 0.5rem;
+        text-align: center;
+        flex: 0 0 auto;
+    }
+
+    .logos-text {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .hero {
+        margin-bottom: 2rem !important;
+        padding-bottom: 2rem !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
 }

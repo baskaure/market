@@ -240,3 +240,16 @@
                 behavior: 'smooth'
             });
         });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Désactive les animations pour les logos sur mobile
+    if (window.innerWidth <= 767) {
+        const logoItems = document.querySelectorAll('.logo-item');
+        logoItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'none';
+            item.style.transition = 'none';
+        });
+    }
+});
