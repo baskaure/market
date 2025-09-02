@@ -4,276 +4,527 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Marketwins - Expert en vidéos publicitaire</title>
 </head>
 <body>
+    <!-- Cursor personnalisé -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particules d'arrière-plan -->
+    <div class="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-        <div class="logo">
-            <a href="#top">
-                <img src="images/logo.png" alt="Kingdom Ads" width="60" height="60">
-            </a>
-        </div>
+            <div class="logo">
+                <a href="#top" class="logo-link">
+                    <div class="logo-container">
+                        <img src="images/logo.png" alt="Kingdom Ads" width="60" height="60" class="logo-img">
+                        <div class="logo-glow"></div>
+                    </div>
+                </a>
+            </div>
 
             <div class="trust-badge">
-                ✓ Plus de 200 clients satisfaits
+                <div class="trust-icon">✓</div>
+                <span>Plus de 200 clients satisfaits</span>
+                <div class="trust-pulse"></div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="top">
+        <div class="hero-bg-animation"></div>
+        <div class="floating-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Développez votre activité grâce à notre test publicitaire</h1>
-                <p class="subtitle">Développons ensemble un test sur un budget publicitaire de 1000€ à 2000€ et augmentons vos prises de rdv et le nombre de vos clients</p>
+                <div class="hero-badge">
+                    <span class="badge-text">🚀 Nouveau</span>
+                    <span class="badge-highlight">Test publicitaire révolutionnaire</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Développez votre activité</span>
+                    <span class="title-line gradient-text">grâce à notre test</span>
+                    <span class="title-line">publicitaire</span>
+                </h1>
+                
+                <p class="subtitle">
+                    Développons ensemble un test sur un budget publicitaire de 
+                    <span class="highlight-text">1000€ à 2000€</span> et augmentons vos 
+                    <span class="highlight-text">prises de rdv</span> et le nombre de vos 
+                    <span class="highlight-text">clients</span>
+                </p>
+                
                 <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Commencer le test</a>
-                    <a href="#how-it-works" class="btn-secondary">En savoir plus</a>
+                    <a href="#contact" class="btn-primary magnetic-btn">
+                        <span class="btn-text">Commencer le test</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary glass-btn">
+                        <span class="btn-text">En savoir plus</span>
+                        <div class="btn-ripple"></div>
+                    </a>
                 </div>
             </div>
+            
             <div class="form-card">
-                <h3>Notre prestation ?</h3>
-                <p class="price">À partir de 1000€HT testons la publicité pour votre business</p>
-                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 1.5rem;">Remplissez le formulaire pour réserver un rendez-vous avec nous et développons ensemble votre acquisition</p>
-                <ul class="features-list">
-                    <li>On appelle vos 10 derniers meilleurs clients</li>
-                    <li>On vous fait des scripts qui va captiver cette audience</li>
-                    <li>On vous fait le montage vidéo</li>
-                    <li>On lance sur un budget test de 1000-2000€</li>
-                    <li>On fait un rapport hebdo des stats</li>
-                    <li>On fait un point à la fin</li>
-                </ul>
-                <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 1.5rem;">Si pas satisfait on vous offre 3 scripts et un levier marketing à mettre en place facilement qu'on a mis en place à nos clients</p>
-                <a href="#contact" class="btn-primary" style="width: 100%; text-align: center; display: block;">Cliquez ici pour lancer votre test publicitaire</a>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Notre prestation ?</h3>
+                    <div class="price-container">
+                        <p class="price">À partir de <span class="price-highlight">1000€HT</span></p>
+                        <p class="price-subtitle">testons la publicité pour votre business</p>
+                    </div>
+                    
+                    <p class="card-description">
+                        Remplissez le formulaire pour réserver un rendez-vous avec nous et 
+                        développons ensemble votre acquisition
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">📞</div>
+                            <span>On appelle vos 10 derniers meilleurs clients</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">✍️</div>
+                            <span>On vous fait des scripts qui va captiver cette audience</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🎬</div>
+                            <span>On vous fait le montage vidéo</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <span>On lance sur un budget test de 1000-2000€</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <span>On fait un rapport hebdo des stats</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <span>On fait un point à la fin</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="guarantee-badge">
+                        <div class="guarantee-icon">🛡️</div>
+                        <p>Si pas satisfait on vous offre 3 scripts et un levier marketing à mettre en place facilement qu'on a mis en place à nos clients</p>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary card-cta magnetic-btn">
+                        <span class="btn-text">Cliquez ici pour lancer votre test publicitaire</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-<section class="logos-section">
-    <div class="logos-container">
-        <p class="logos-text">Ces marques nous font confiance :</p>
-        <div class="logos-grid">
-            <div class="logo-item"><img src="images/conecting.png" alt="Logo Jaz" width="210" height="100"></div>
-            <div class="logo-item"><img src="images/gayolle.png" alt="Logo Gayolle" width="210" height="100"></div>
-            <div class="logo-item"><img src="images/guillaume.jpg" alt="Logo Guillaume Dupond" width="210" height="100"></div>
-            <div class="logo-item"><img src="images/camper.png" alt="Logo Camises" width="210" height="100"></div>
-            <div class="logo-item">Et plus de 200 autres clients...</div>
-        </div>
-    </div>
-</section>
-
-<!--- Section Témoignages -->
-<section class="testimonial">
-    <div class="testimonial-container">
-        <div class="testimonial-slider-wrapper">
-            <div class="testimonial-slider">
-                <!-- Slide 1 -->
-                <div class="testimonial-card scroll-reveal no-bg">
-                    <div class="author-avatars">
-                        <img src="images/group.png" alt="François Trousset et associés" class="author-avatar">
-                    </div>
-                    <p class="testimonial-quote">J'ai fait x20 en 4 ans avec eux</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>Rodolphe Toupain</strong><br>
-                            <small>Directeur de RT-Connecting</small>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="testimonial-card scroll-reveal no-bg">
-                    <div class="author-avatars">
-                        <img src="images/group.png" alt="Alice Dupont et associés" class="author-avatar">
-                    </div>
-                    <p class="testimonial-quote">Merci à toute l'équipe pour votre excellent travail ! On a atteint plusieurs millions de vues</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>Mike</strong><br>
-                            <small>Bazehouse</small>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="testimonial-card scroll-reveal no-bg">
-                    <div class="author-avatars">
-                        <img src="images/group.png" alt="Marc Leroy et associés" class="author-avatar">
-                    </div>
-                    <p class="testimonial-quote">J'ai tous mes mois qui sont complets avec plus de 80 rdvs par mois</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <strong>Claire</strong><br>
-                            <small>Hypnothérapeute</small>
-                        </div>
+    <!-- Logos Section -->
+    <section class="logos-section">
+        <div class="logos-container">
+            <div class="section-header">
+                <p class="logos-text">Ces marques nous font confiance :</p>
+                <div class="trust-indicator">
+                    <div class="trust-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </div>
-            <!-- Flèches -->
-            <button class="testimonial-arrow prev">&#10094;</button>
-            <button class="testimonial-arrow next">&#10095;</button>
-            <!-- Points de navigation -->
-            <div class="testimonial-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
+            
+            <div class="logos-grid">
+                <div class="logo-item" data-tilt>
+                    <div class="logo-wrapper">
+                        <img src="images/conecting.png" alt="Logo Jaz" width="210" height="100">
+                        <div class="logo-overlay"></div>
+                    </div>
+                </div>
+                <div class="logo-item" data-tilt>
+                    <div class="logo-wrapper">
+                        <img src="images/gayolle.png" alt="Logo Gayolle" width="210" height="100">
+                        <div class="logo-overlay"></div>
+                    </div>
+                </div>
+                <div class="logo-item" data-tilt>
+                    <div class="logo-wrapper">
+                        <img src="images/guillaume.jpg" alt="Logo Guillaume Dupond" width="210" height="100">
+                        <div class="logo-overlay"></div>
+                    </div>
+                </div>
+                <div class="logo-item" data-tilt>
+                    <div class="logo-wrapper">
+                        <img src="images/camper.png" alt="Logo Camises" width="210" height="100">
+                        <div class="logo-overlay"></div>
+                    </div>
+                </div>
+                <div class="logo-item special-item" data-tilt>
+                    <div class="logo-wrapper">
+                        <div class="plus-clients">
+                            <span class="plus-number">+200</span>
+                            <span class="plus-text">autres clients...</span>
+                        </div>
+                        <div class="logo-overlay"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
+    <!-- Section Témoignages -->
+    <section class="testimonial">
+        <div class="testimonial-bg"></div>
+        <div class="testimonial-container">
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal">Ce qu'ils disent de nous</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="testimonial-slider-wrapper">
+                <div class="testimonial-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-card modern-card">
+                        <div class="card-shine"></div>
+                        <div class="testimonial-content">
+                            <div class="quote-mark">"</div>
+                            <p class="testimonial-quote">J'ai fait x20 en 4 ans avec eux</p>
+                            <div class="author-section">
+                                <div class="author-avatars">
+                                    <img src="images/group.png" alt="François Trousset et associés" class="author-avatar">
+                                </div>
+                                <div class="author-info">
+                                    <strong class="author-name">Rodolphe Toupain</strong>
+                                    <small class="author-title">Directeur de RT-Connecting</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-card modern-card">
+                        <div class="card-shine"></div>
+                        <div class="testimonial-content">
+                            <div class="quote-mark">"</div>
+                            <p class="testimonial-quote">Merci à toute l'équipe pour votre excellent travail ! On a atteint plusieurs millions de vues</p>
+                            <div class="author-section">
+                                <div class="author-avatars">
+                                    <img src="images/group.png" alt="Alice Dupont et associés" class="author-avatar">
+                                </div>
+                                <div class="author-info">
+                                    <strong class="author-name">Mike</strong>
+                                    <small class="author-title">Bazehouse</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="testimonial-card modern-card">
+                        <div class="card-shine"></div>
+                        <div class="testimonial-content">
+                            <div class="quote-mark">"</div>
+                            <p class="testimonial-quote">J'ai tous mes mois qui sont complets avec plus de 80 rdvs par mois</p>
+                            <div class="author-section">
+                                <div class="author-avatars">
+                                    <img src="images/group.png" alt="Marc Leroy et associés" class="author-avatar">
+                                </div>
+                                <div class="author-info">
+                                    <strong class="author-name">Claire</strong>
+                                    <small class="author-title">Hypnothérapeute</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="testimonial-navigation">
+                    <button class="testimonial-arrow prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="testimonial-arrow next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="testimonial-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- How it works -->
     <section class="how-it-works" id="how-it-works">
+        <div class="section-bg-pattern"></div>
         <div class="how-it-works-container">
-            <h2 class="section-title scroll-reveal" >Comment ça fonctionne ?</h2>
-            <p class="section-subtitle scroll-reveal">Un processus simple et efficace en 3 étapes pour maximiser vos résultats</p>
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal">Comment ça fonctionne ?</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle scroll-reveal">Un processus simple et efficace en 3 étapes pour maximiser vos résultats</p>
+            </div>
             
-            <div class="steps-grid">
-                <div class="step-card scroll-reveal">
-                    <div class="step-number">1</div>
-                    <h3>Remplissez le formulaire</h3>
-                    <p>Répondez aux questions pour réservez un créneaux avec vous</p>
+            <div class="steps-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="step-card modern-step" data-step="1">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>1</span>
+                        <div class="number-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Remplissez le formulaire</h3>
+                        <p>Répondez aux questions pour réservez un créneaux avec vous</p>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
-                <div class="step-card scroll-reveal">
-                    <div class="step-number">2</div>
-                    <h3>On fait un audit</h3>
-                    <p>On se présente, on voit ce qui est faisable, on comprend votre business</p>
+                
+                <div class="step-card modern-step" data-step="2">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>2</span>
+                        <div class="number-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>On fait un audit</h3>
+                        <p>On se présente, on voit ce qui est faisable, on comprend votre business</p>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
-                <div class="step-card scroll-reveal">
-                    <div class="step-number">3</div>
-                    <h3>On appelle vos 10 meilleurs clients</h3>
-                    <p>Ca commence !!</p>
+                
+                <div class="step-card modern-step" data-step="3">
+                    <div class="step-glow"></div>
+                    <div class="step-number">
+                        <span>3</span>
+                        <div class="number-ring"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>On appelle vos 10 meilleurs clients</h3>
+                        <p>Ca commence !!</p>
+                    </div>
                 </div>
             </div>
 
-            <div style="text-align: center;">
-                <a href="#contact" class="btn-primary">Cliquez ici pour lancer ce test publicitaire !</a>
+            <div class="cta-center">
+                <a href="#contact" class="btn-primary magnetic-btn pulse-btn">
+                    <span class="btn-text">Cliquez ici pour lancer ce test publicitaire !</span>
+                    <div class="btn-shine"></div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about">
+        <div class="about-bg"></div>
         <div class="about-container">
             <div class="about-content scroll-reveal-left">
-                <h2>Qui sommes-nous ?</h2>
-                <p>Nous sommes les Marketwins ! Fondateur de Kingdom Ads. Nous avons ensemble accompagnés plus de 200 entreprises à performer sur les réseaux sociaux, depuis plus de 8 ans.</p>
-                <p>Nous avons fait des conférences, organiser des cours, donner nos meilleurs conseils et astuces à plusieurs milliers d'entrepreneurs. Et qui sait ce serait peut être vous le prochain ?</p>
+                <div class="section-badge">
+                    <span>👥 Notre équipe</span>
+                </div>
                 
-                <a href="#contact" class="btn-outline">Check notre instagram</a>
+                <h2 class="about-title">Qui sommes-nous ?</h2>
+                
+                <div class="about-text">
+                    <p>Nous sommes les <span class="brand-highlight">Marketwins</span> ! Fondateur de Kingdom Ads. Nous avons ensemble accompagnés plus de <span class="stat-highlight">200 entreprises</span> à performer sur les réseaux sociaux, depuis plus de <span class="stat-highlight">8 ans</span>.</p>
+                    
+                    <p>Nous avons fait des conférences, organiser des cours, donner nos meilleurs conseils et astuces à plusieurs milliers d'entrepreneurs. Et qui sait ce serait peut être vous le prochain ?</p>
+                </div>
+                
+                <a href="#contact" class="btn-outline magnetic-btn">
+                    <span class="btn-text">Check notre instagram</span>
+                    <div class="btn-arrow">→</div>
+                </a>
                 
                 <div class="about-stats">
-                    <div class="stat">
+                    <div class="stat modern-stat" data-count="200">
+                        <div class="stat-bg"></div>
                         <span class="stat-number">200</span>
                         <span class="stat-label">+200 clients accompagnés</span>
+                        <div class="stat-pulse"></div>
                     </div>
-                    <div class="stat">
+                    <div class="stat modern-stat" data-count="10">
+                        <div class="stat-bg"></div>
                         <span class="stat-number">+10M</span>
                         <span class="stat-label">+de 10M de CA générés pour eux</span>
+                        <div class="stat-pulse"></div>
                     </div>
-                    <div class="stat">
+                    <div class="stat modern-stat" data-count="2">
+                        <div class="stat-bg"></div>
                         <span class="stat-number">2</span>
                         <span class="stat-label">Cerveaux à votre disposition</span>
+                        <div class="stat-pulse"></div>
                     </div>
-                    <div class="stat">
+                    <div class="stat modern-stat" data-count="99">
+                        <div class="stat-bg"></div>
                         <span class="stat-number">99%</span>
                         <span class="stat-label">De clients satisfait</span>
+                        <div class="stat-pulse"></div>
                     </div>
                 </div>
             </div>
+            
             <div class="team-photo scroll-reveal-right">
                 <div class="team-photo-container">
-                    <img src="images/qui.png" alt="Nos 2 associés" class="team-image">
+                    <div class="photo-frame">
+                        <img src="images/qui.png" alt="Nos 2 associés" class="team-image">
+                        <div class="photo-overlay"></div>
+                        <div class="photo-glow"></div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-<!-- Features -->
-<section class="features">
-    <div class="features-container">
-        <h2 class="section-title2 scroll-reveal">Propulsez votre succès grâce à ce test intelligent</h2>
-        <p class="section-subtitle2 scroll-reveal">On sortira gagnant de ce test avec de nouvelles idées, des vrais stats et surtout on va trouver votre audience sur les réseaux publicitaires</p>
-        
-        <div class="features-grid">
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">
-                    <img src="images/note.png" alt="Notes et stats" class="feature-image">
-                </div>
-                <h3>Notes et avis</h3>
-                <p>Vous serez 100% satisfait ou alors on vous offre le meilleur levier marketing qu'on conseille à nos clients qui à multipliez leur CA et aussi des nouveaux scripts publicitaires</p>
+    <!-- Features -->
+    <section class="features">
+        <div class="features-bg"></div>
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title2 scroll-reveal">Propulsez votre succès grâce à ce test intelligent</h2>
+                <div class="title-underline white"></div>
+                <p class="section-subtitle2 scroll-reveal">On sortira gagnant de ce test avec de nouvelles idées, des vrais stats et surtout on va trouver votre audience sur les réseaux publicitaires</p>
             </div>
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">
-                    <img src="images/marketing.png" alt="Marketing et vente" class="feature-image">
+            
+            <div class="features-grid">
+                <div class="feature-card modern-feature scroll-reveal" data-tilt>
+                    <div class="feature-bg"></div>
+                    <div class="feature-icon">
+                        <img src="images/note.png" alt="Notes et stats" class="feature-image">
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Notes et avis</h3>
+                    <p>Vous serez 100% satisfait ou alors on vous offre le meilleur levier marketing qu'on conseille à nos clients qui à multipliez leur CA et aussi des nouveaux scripts publicitaires</p>
+                    <div class="feature-shine"></div>
                 </div>
-                <h3>Marketing et vente</h3>
-                <p>Vous aurez pas juste des clics et pas de ventes, vous aurez des interactions, des prises de rdvs et aussi des clients. On optimisera tout ça ensemble pour trouver vos VRAIS BONS clients</p>
-            </div>
-            <div class="feature-card scroll-reveal">
-                <div class="feature-icon">
-                    <img src="images/expercience.png" alt="Expérience client" class="feature-image">
+                
+                <div class="feature-card modern-feature scroll-reveal" data-tilt>
+                    <div class="feature-bg"></div>
+                    <div class="feature-icon">
+                        <img src="images/marketing.png" alt="Marketing et vente" class="feature-image">
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Marketing et vente</h3>
+                    <p>Vous aurez pas juste des clics et pas de ventes, vous aurez des interactions, des prises de rdvs et aussi des clients. On optimisera tout ça ensemble pour trouver vos VRAIS BONS clients</p>
+                    <div class="feature-shine"></div>
                 </div>
-                <h3>Expérience client</h3>
-                <p>Notre but ? Rendre riche les vrais dirigeants bienveillants, avec des vrais valeurs qui veulent et peuvent changer le monde ! Alors tiens toi prêt on ne prendra pas tout le monde !</p>
+                
+                <div class="feature-card modern-feature scroll-reveal" data-tilt>
+                    <div class="feature-bg"></div>
+                    <div class="feature-icon">
+                        <img src="images/expercience.png" alt="Expérience client" class="feature-image">
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Expérience client</h3>
+                    <p>Notre but ? Rendre riche les vrais dirigeants bienveillants, avec des vrais valeurs qui veulent et peuvent changer le monde ! Alors tiens toi prêt on ne prendra pas tout le monde !</p>
+                    <div class="feature-shine"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- CTA Section -->
     <section class="cta" id="contact">
+        <div class="cta-bg-animation"></div>
         <div class="cta-container">
-            <h2 class="scroll-reveal">Prêt à commencer ?</h2>
-            <p class="scroll-reveal">Lancez votre test publicitaire dès aujourd'hui et découvrez le potentiel de croissance de votre entreprise</p>
-            <a href="#" class="btn-white scroll-reveal">Cliquez ici pour lancer votre test publicitaire</a>
+            <div class="cta-content">
+                <div class="cta-badge scroll-reveal">
+                    <span>🎯 Prêt à décoller ?</span>
+                </div>
+                
+                <h2 class="cta-title scroll-reveal">Prêt à commencer ?</h2>
+                
+                <p class="cta-subtitle scroll-reveal">
+                    Lancez votre test publicitaire dès aujourd'hui et découvrez le 
+                    <span class="highlight-text">potentiel de croissance</span> de votre entreprise
+                </p>
+                
+                <div class="cta-button-container scroll-reveal">
+                    <a href="#" class="btn-white magnetic-btn mega-btn">
+                        <span class="btn-text">Cliquez ici pour lancer votre test publicitaire</span>
+                        <div class="btn-shine"></div>
+                        <div class="btn-particles"></div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-bg"></div>
         <div class="footer-container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Kingdom Ads" width="100" height="100">
-        </div>
-            <p class="footer-title">Kingdom Ads</p>
-            <p style="opacity: 0.7; margin-bottom: 2rem;">Votre partenaire de confiance pour développer votre activité grâce à la publicité digitale</p>
-            
-<div class="social-links">
-    <a href="#" class="social-link" title="Instagram">
-        <img src="images/insta.svg" alt="Instagram" width="24" height="24">
-    </a>
-    <a href="#" class="social-link" title="Facebook">
-        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
-    </a>
-    <a href="#" class="social-link" title="LinkedIn">
-        <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
-    </a>
-    <a href="#" class="social-link" title="Email">
-        <img src="images/email.png" alt="Email" width="24" height="24">
-    </a>
-    <a href="#" class="social-link" title="YouTube">
-        <img src="images/youtube.svg" alt="YouTube" width="24" height="24">
-    </a>
-    <a href="#" class="social-link" title="TikTok">
-        <img src="images/tiktok.png" alt="TikTok" width="24" height="24">
-    </a>
-</div>
-
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <img src="images/logo.png" alt="Kingdom Ads" width="100" height="100" class="footer-logo-img">
+                        <div class="logo-glow"></div>
+                    </div>
+                    <p class="footer-title">Kingdom Ads</p>
+                    <p class="footer-description">Votre partenaire de confiance pour développer votre activité grâce à la publicité digitale</p>
+                </div>
+                
+                <div class="social-section">
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Instagram" data-social="instagram">
+                            <img src="images/insta.svg" alt="Instagram" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" title="Facebook" data-social="facebook">
+                            <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn" data-social="linkedin">
+                            <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" title="Email" data-social="email">
+                            <img src="images/email.png" alt="Email" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube" data-social="youtube">
+                            <img src="images/youtube.svg" alt="YouTube" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                        <a href="#" class="social-link" title="TikTok" data-social="tiktok">
+                            <img src="images/tiktok.png" alt="TikTok" width="24" height="24">
+                            <div class="social-glow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
             
             <div class="footer-bottom">
+                <div class="footer-line"></div>
                 <p>&copy; 2024 Kingdom Ads. Tous droits réservés.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                <p class="footer-tagline">
                     Développez votre activité | Maximisez vos conversions | Obtenez des résultats mesurables
                 </p>
             </div>
         </div>
     </footer>
-<script src="scripts/script.js"></script>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
